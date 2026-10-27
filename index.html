@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshul Mart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Anshul Mart</h1>
+    </header>
+
+    <div class="main">
+
+        <!-- Left side: products -->
+        <section class="products-box">
+            <div class="filters">
+                <label>Category
+                    <select id="categoryFilter">
+                        <option value="all">All</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="books">Books</option>
+                    </select>
+                </label>
+
+                <label>Sort by
+                    <select id="sortSelect">
+                        <option value="default">Default</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="productList" class="product-list"></div>
+        </section>
+
+        <!-- Right side: cart and checkout -->
+        <aside class="cart-box">
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+
+            <div class="coupon">
+                <input type="text" id="couponInput" placeholder="Coupon code">
+                <button id="applyCoupon">Apply</button>
+            </div>
+            <p id="couponMessage"></p>
+
+            <div class="totals">
+                <p><span>Subtotal</span> <span id="subtotal">₹0</span></p>
+                <p><span>Discount</span> <span id="discount">- ₹0</span></p>
+                <p class="grand"><span>Total</span> <span id="total">₹0</span></p>
+            </div>
+
+            <h2>Checkout</h2>
+            <input type="text" id="custName" placeholder="Your name">
+            <input type="text" id="custAddress" placeholder="Delivery address">
+            <button id="placeOrder" class="order-btn">Place Order</button>
+        </aside>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
